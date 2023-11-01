@@ -1,7 +1,9 @@
 # codesignTest
 Minimal demonstration for codesigning arm64 MacOS applications with CMake's Unix Makefile generator, and still receiving the "App is damaged and can't be opened" error.
 
-This generates a .dmg image of a c++ program that just prints "codesignTest".  The binary that is distributed with the .dmg gets codesigned with a script named `macCodeSign.cmake`.  Reproducing this will require a valid Developer ID Application certificate signed with a private key, and the modification of the User ID in `macCodeSign.cmake` from "DQ4ZFL4KLF" to what is on your computer.
+This generates a .dmg image of a c++ program that just prints "codesignTest".  The binary that is distributed with the .dmg is codesigned with the script named `macCodeSign.cmake`.  The .dmg requires manual codesigning as outlined below.
+
+Reproducing this will require a valid Developer ID Application certificate signed with a private key, and the modification of the User ID in `macCodeSign.cmake` from "DQ4ZFL4KLF" to what is on your computer.
 
 To reproduce you can download the .dmg in [this repository's Releases](https://github.com/sgpearse/codesignTest/releases), and then verify that the binary and .dmg are codesigned with `codesign -dv --verbose=4 </Applications/codesignTest.app/Contents/MacOS/codesigntest or ~/Downloads/codesignTest-0.1.1-Darwin.dmg>`.  Or, you can genereate the .dmg by doing the following:
 
