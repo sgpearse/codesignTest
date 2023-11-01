@@ -3,7 +3,7 @@ Minimal demonstration for codesigning arm64 MacOS applications with CMake's Unix
 
 This generates a .dmg image of a c++ program that just prints "codesignTest".  The binary that is distributed with the .dmg gets codesigned with a script named `macCodeSign.cmake`.  Reproducing this will require a valid Developer ID Application certificate signed with a private key, and the modification of the User ID in `macCodeSign.cmake` from "DQ4ZFL4KLF" to what is on your computer.
 
-To reproduce you can download the .dmg in the releases genereate the .dmg:
+To reproduce you can download the .dmg in [this repository's Releases](https://github.com/sgpearse/codesignTest/releases).  Or, you can genereate the .dmg by doing the following:
 
 ```
 git clone https://github.com/sgpearse/codesignTest.git
