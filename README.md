@@ -7,6 +7,9 @@ Reproducing this will require a valid Developer ID Application certificate signe
 
 To reproduce you can download the .dmg in [this repository's Releases](https://github.com/sgpearse/codesignTest/releases), and then verify that the binary and .dmg are codesigned with `codesign -dv --verbose=4 </Applications/codesignTest.app/Contents/MacOS/codesigntest or ~/Downloads/codesignTest-0.1.1-Darwin.dmg>`.  Or, you can genereate the .dmg by doing the following:
 
+MacOS build version: 12.6.3
+MacOS test version: 13.5.2
+
 ```
 git clone https://github.com/sgpearse/codesignTest.git
 cd codesignTest && mkdir build && cd build
